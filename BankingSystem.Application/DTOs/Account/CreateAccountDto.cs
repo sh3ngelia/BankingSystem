@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankingSystem.Application.DTOs.Account
+﻿namespace BankingSystem.Application.DTOs.Account;
+public class CreateAccountDto
 {
-    internal class CreateAccountDto
-    {
-    }
+    public Guid UserId { get; set; }
+    public string Currency { get; set; } = "USD";
 }
