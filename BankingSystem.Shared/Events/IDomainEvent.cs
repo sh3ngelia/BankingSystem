@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MediatR;
 
-namespace BankingSystem.Shared.Events
+namespace BankingSystem.Shared.Events;
+
+public interface IDomainEvent : INotification
 {
-    internal interface IDomainEvent
-    {
-    }
+    DateTime OccurredOn { get; }
 }

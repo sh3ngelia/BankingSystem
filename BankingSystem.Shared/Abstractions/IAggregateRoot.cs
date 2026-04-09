@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BankingSystem.Shared.Events;
 
-namespace BankingSystem.Shared.Abstractions
+namespace BankingSystem.Shared.Abstractions;
+
+public interface IAggregateRoot : IEntity
 {
-    internal interface IAggregateRoot
-    {
-    }
+    IReadOnlyList<IDomainEvent> DomainEvents { get; }
+    void ClearDomainEvents();
 }

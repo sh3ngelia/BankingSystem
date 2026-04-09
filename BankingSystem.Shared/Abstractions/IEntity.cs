@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace BankingSystem.Shared.Abstractions;
 
-namespace BankingSystem.Shared.Abstractions
+public interface IEntity
 {
-    internal interface IEntity
-    {
-    }
+    Guid Id { get; }
 }
