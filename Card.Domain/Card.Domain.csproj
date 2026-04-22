@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Events\" />
-    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>
