@@ -10,8 +10,4 @@
     <ProjectReference Include="..\BankingSystem.Shared\BankingSystem.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-
 </Project>
