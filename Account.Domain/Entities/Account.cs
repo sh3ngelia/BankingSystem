@@ -3,6 +3,8 @@ using Account.Domain.Events;
 using Account.Domain.Exceptions;
 using Account.Domain.ValueObjects;
 using BankingSystem.Shared.BaseTypes;
+using BankingSystem.Shared.Enums;
+using BankingSystem.Shared.ValueObjects;
 
 namespace Account.Domain.Entities;
 

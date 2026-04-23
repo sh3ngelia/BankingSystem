@@ -1,8 +1,8 @@
-﻿using Account.Domain.Enums;
-using Account.Domain.Exceptions;
-using BankingSystem.Shared.Abstractions;
+﻿using BankingSystem.Shared.Abstractions;
+using BankingSystem.Shared.Enums;
+using BankingSystem.Shared.Exceptions;
 
-namespace Account.Domain.ValueObjects;
+namespace BankingSystem.Shared.ValueObjects;
 
 public sealed class Money : IValueObject
 {

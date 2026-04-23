@@ -1,4 +1,4 @@
-﻿namespace Account.Domain.Enums;
+﻿namespace BankingSystem.Shared.Enums;
 
 public enum Currency
 {

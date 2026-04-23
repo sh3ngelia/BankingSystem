@@ -1,6 +1,6 @@
-﻿using Account.Domain.Enums;
+﻿using BankingSystem.Shared.Enums;
 
-namespace Account.Domain.Exceptions;
+namespace BankingSystem.Shared.Exceptions;
 
 public class CurrencyMismatchException : Exception
 {

@@ -1,5 +1,4 @@
-﻿namespace Account.Domain.Exceptions;
-
+﻿namespace BankingSystem.Shared.Exceptions;
 public class InsufficientFundsException : Exception
 {
     public InsufficientFundsException(decimal required, decimal available)
