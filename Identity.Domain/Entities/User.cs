@@ -23,6 +23,10 @@ public class User : AggregateRoot
 
     private User() { }
 
+    public void RecordLogin()
+    {
+        AddDomainEvent(new UserLoggedInEvent(Id, DateTime.UtcNow));
+    }
     public static User Create(string email, string passwordHash, string firstName, string lastName)
     {
         var user = new User

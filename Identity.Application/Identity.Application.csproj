@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Login\" />
-    <Folder Include="Commands\RevokeToken\" />
-    <Folder Include="Validators\" />
-    <Folder Include="Queries\GetUser\" />
-    <Folder Include="Queries\GetAllUsers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="MediatR" Version="14.1.0" />
   </ItemGroup>
