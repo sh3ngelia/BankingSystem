@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Account.Application\Account.Application.csproj" />
-    <ProjectReference Include="..\Account.Domain\Account.Domain.csproj" />
     <ProjectReference Include="..\BankingSystem.Shared\BankingSystem.Shared.csproj" />
+    <ProjectReference Include="..\Transaction.Application\Transaction.Application.csproj" />
+    <ProjectReference Include="..\Transaction.Domain\Transaction.Domain.csproj" />
   </ItemGroup>
 
 </Project>
