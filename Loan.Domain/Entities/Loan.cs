@@ -117,7 +117,6 @@ public class Loan : AggregateRoot
 
     private RepaymentSchedule GenerateSchedule()
     {
-        // ანუიტეტური გამოთვლა
         var monthlyRate = InterestRate.AsDecimalFraction() / 12;
         var installments = new List<Installment>();
 
