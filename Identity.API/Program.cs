@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Scalar.AspNetCore;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ builder.Services.AddControllers()
     {
         options.SuppressModelStateInvalidFilter = true;
     });
+
+builder.Services.AddOpenApi();
 
 // MediatR
 builder.Services.AddMediatR(cfg =>
@@ -51,6 +54,11 @@ var app = builder.Build();
 // Middleware Pipeline
 app.UseMiddleware<ExceptionMiddleware>();
 
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.MapScalarApiReference();
+}
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
