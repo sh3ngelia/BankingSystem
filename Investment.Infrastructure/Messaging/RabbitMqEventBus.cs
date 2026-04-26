@@ -3,7 +3,7 @@ using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
 
-namespace Card.Infrastructure.Messaging;
+namespace Investment.Infrastructure.Messaging;
 
 public class RabbitMqEventBus : IDisposable
 {
