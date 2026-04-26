@@ -18,6 +18,7 @@ public class RefreshToken : Entity
     {
         return new RefreshToken
         {
+            Id = Guid.NewGuid(),
             Token = Convert.ToBase64String(Guid.NewGuid().ToByteArray()),
             UserId = userId,
             ExpiresAt = DateTime.UtcNow.AddDays(expiryDays),

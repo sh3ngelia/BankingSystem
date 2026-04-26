@@ -45,14 +45,11 @@ public class UserRepository : IUserRepository
 
     public async Task UpdateAsync(User user, CancellationToken ct = default)
     {
-        _context.Users.Update(user);
         await Task.CompletedTask;
     }
 
     public async Task<IEnumerable<User>> GetAllAsync(CancellationToken ct = default)
     {
-        // Dapper-ის ნაცვლად EF Core ვიყენებ სიისთვის
-        // რადგან User-ს Value Objects აქვს რომლებიც Dapper-მა არ იცის
         return await _context.Users
             .Include(u => u.Roles)
             .Where(u => u.Status != Identity.Domain.Enums.UserStatus.Deleted)

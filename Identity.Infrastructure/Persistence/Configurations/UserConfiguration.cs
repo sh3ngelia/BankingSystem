@@ -55,7 +55,11 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasMany(u => u.RefreshTokens)
             .WithOne()
             .HasForeignKey(rt => rt.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Cascade)
+            .IsRequired(false);
+
+        builder.Navigation(u => u.RefreshTokens)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
 
         // Domain Events ignore — DB-ში არ ინახება
         builder.Ignore(u => u.DomainEvents);

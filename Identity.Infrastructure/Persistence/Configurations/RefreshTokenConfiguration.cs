@@ -20,5 +20,11 @@ public class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken>
         builder.Property(r => r.IsRevoked)
             .IsRequired()
             .HasDefaultValue(false);
+
+        builder.Property(r => r.UserId)
+            .IsRequired();
+
+        builder.Property(r => r.Id)
+            .ValueGeneratedNever();
     }
 }
