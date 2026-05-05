@@ -13,7 +13,6 @@ public class AccountDbContextFactory : IDesignTimeDbContextFactory<AccountDbCont
                 "../Account.API"))
             .AddJsonFile("appsettings.json")
             .Build();
-
         var optionsBuilder = new DbContextOptionsBuilder<AccountDbContext>();
         optionsBuilder.UseSqlServer(
             configuration.GetConnectionString("AccountConnection"));
